@@ -25,11 +25,13 @@ html {
   visibility: visible;
   transition: all 0.5s 1s;
 }
+
 .search-input {
   width: 30rem;
   display: flex;
   align-items: center;
 }
+
 .search-input input {
   width: 27rem;
   background-color: transparent;
@@ -41,20 +43,25 @@ html {
   color: #555;
   margin-right: 1rem;
 }
+
 .search-input i {
   font-size: 1.5rem;
   color: #999;
   cursor: pointer;
 }
+
 .search-icon {
   font-size: 1.5rem;
   position: absolute;
   top: 1.7rem;
   right: 3rem;
+  animation: searchIconAnim2 0.5s forwards;
 }
+
 .search-icon.change {
   animation: searchIconAnim 1s forwards;
 }
+
 .search-icon i {
   color: #999;
   cursor: pointer;
@@ -64,16 +71,29 @@ html {
   0% {
     top: 1.7rem;
   }
+
   40% {
     top: 40%;
     font-size: 25rem;
   }
+
   60% {
     top: 40%;
     right: calc(50% + 16rem);
   }
+
   100% {
     top: 1.7rem;
     right: calc(50% + 16rem);
+  }
+}
+
+@keyframes searchIconAnim2 {
+  0% {
+    right: calc(50% + 16rem);
+  }
+
+  100% {
+    right: 3rem;
   }
 }
